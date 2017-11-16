@@ -1,0 +1,14 @@
+service: gce-scheduler
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: main.app
+  login: admin
+
+env_variables:
+  PROJECT: "YOUR_PROJECT"
+  LABEL_KEY: "gce-scheduler"
+  LABEL_VALUE: "startstop"

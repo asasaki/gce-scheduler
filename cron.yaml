@@ -1,0 +1,9 @@
+cron:
+- description: Start instances
+  url: /start_instances
+  target: gce-scheduler
+  schedule: every monday 07:00
+- description: Stop instances
+  url: /stop_instances
+  target: gce-scheduler
+  schedule: every friday 23:00
